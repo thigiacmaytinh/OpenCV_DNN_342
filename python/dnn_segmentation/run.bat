@@ -1,0 +1,1 @@
+segment.py --model enet-model.net --classes enet-classes.txt --colors enet-colors.txt --width 800 --image IMG_1376.jpg
