@@ -1,1 +1,1 @@
-pip3 install -r requirements_windows.txt
+pip3 install -r requirements.txt
