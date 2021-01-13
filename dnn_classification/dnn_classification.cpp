@@ -6,6 +6,11 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 
+//TGMT: thigiacmaytinh.com
+#include "TGMTConfig.h"
+#include "TGMTdebugger.h"
+#include "stdafx.h"
+
 const char* keys =
     "{ help  h     | | Print help message. }"
     "{ input i     | | Path to input image or video file. Skip this argument to capture frames from a camera.}"
@@ -39,15 +44,19 @@ std::vector<std::string> classes;
 
 int main(int argc, char** argv)
 {
+	if (!GetTGMTConfig()->LoadSettingFromFile())
+	{
+		PrintError("Can not read config");
+		WriteLog("Can not read config");
+		return 0;
+	}
+
 	cv::CommandLineParser parser(argc, argv, keys);
     parser.about("Use this script to run classification deep learning networks using OpenCV.");
-    if (argc == 1 || parser.has("help"))
-    {
-        parser.printMessage();
-        return 0;
-    }
+
 
     float scale = parser.get<float>("scale");
+
 	cv::Scalar mean = parser.get<cv::Scalar>("mean");
     bool swapRB = parser.get<bool>("rgb");
     CV_Assert(parser.has("width"), parser.has("height"));
@@ -83,8 +92,9 @@ int main(int argc, char** argv)
     //! [Open a video file or an image file or a camera stream]
     cv::VideoCapture cap;
 
-    if (parser.has("input"))
-        cap.open(parser.get<cv::String>("input"));
+	std::string input = GetTGMTConfig()->ReadValueString("dnn_classification", "input");
+    if (input != "")
+        cap.open(input);
     else
         cap.open(0);
     //! [Open a video file or an image file or a camera stream]

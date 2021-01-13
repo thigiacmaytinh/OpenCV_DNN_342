@@ -10,16 +10,46 @@
     <Filter Include="Include\opencv2\face">
       <UniqueIdentifier>{507E6679-3A9B-36B8-8727-9A4F75735D3C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{CE12B7EF-4DE0-3097-AE17-93B2DA197F27}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Src">
       <UniqueIdentifier>{CD70F01E-A37A-31F4-9B99-9B18D6482D8A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TGMT">
+      <UniqueIdentifier>{262989c7-3195-4c30-9326-3b4265b022cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="classification.cpp">
-      <Filter>Src</Filter>
+    <ClCompile Include="dnn_classification.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\stdafx.cpp">
+      <Filter>TGMT</Filter>
     </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTConfig.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTdebugger.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTfile.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTutil.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lib\TGMTcpp\src\stdafx.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTConfig.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTdebugger.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTfile.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTutil.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

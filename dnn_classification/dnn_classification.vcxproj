@@ -22,7 +22,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="classification.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\stdafx.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTConfig.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTdebugger.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTfile.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTutil.cpp" />
+    <ClCompile Include="dnn_classification.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lib\TGMTcpp\src\stdafx.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTConfig.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTdebugger.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTfile.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTutil.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DEAF0D61-33E4-40E2-B27F-07E72BB05881}</ProjectGuid>
@@ -60,16 +72,16 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="..\..\lib\opencv342\OpenCV342_Debug.props" />
+    <Import Project="..\lib\opencv342\OpenCV342_Debug.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="..\..\lib\opencv342\OpenCV342_Debug_x64.props" />
+    <Import Project="..\lib\opencv342\OpenCV342_Debug_x64.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="..\..\lib\opencv342\OpenCV342_Release.props" />
+    <Import Project="..\lib\opencv342\OpenCV342_Release.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="..\..\lib\opencv342\OpenCV342_Release_x64.props" />
+    <Import Project="..\lib\opencv342\OpenCV342_Release_x64.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
